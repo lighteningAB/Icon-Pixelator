@@ -16,8 +16,6 @@ def convert_to_black_and_white(image_path, output_path):
 
             # Detect edges to outline borders
             bordered_img = bordered_img.filter(ImageFilter.FIND_EDGES)
-            # Convert to black and white (binary)
-            bordered_img = bordered_img.convert('1')
 
             # Save the result
             bordered_img.save(output_path)
